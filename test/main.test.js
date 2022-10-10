@@ -14,6 +14,12 @@ describe("medianScore", () => {
     const expected = 8.4;
     expect(actual).to.equal(expected);
   });
+
+  it("should return null if there are no students", () => {
+    const students = [];
+    const actual = medianScore(students);
+    expect(actual).to.be.null;
+  })
 });
 
 describe("topScoringStudent", () => {
@@ -30,4 +36,10 @@ describe("topScoringStudent", () => {
     expect(actual).to.be.an("object");
     expect(actual).to.eql(expected);
   });
+
+  it("should return null if there are no students in the list", () => {
+    const students = [];
+    const actual = topScoringStudent(students);
+    expect(actual).to.be.null;  
+  })
 });
